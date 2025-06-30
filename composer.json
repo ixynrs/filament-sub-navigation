@@ -1,0 +1,63 @@
+{
+    "name": "hayderhatem/filament-sub-navigation",
+    "description": "Add hover-based sub-navigation to Filament navigation items using badges",
+    "keywords": [
+        "hayderhatem",
+        "laravel",
+        "filament",
+        "navigation",
+        "sub-navigation",
+        "badge"
+    ],
+    "homepage": "https://github.com/hayderhatem/filament-sub-navigation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hayder Hatem",
+            "email": "hayder.hatem@example.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.15.0",
+        "illuminate/contracts": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^7.9|^8.0",
+        "orchestra/testbench": "^8.0|^9.0",
+        "pestphp/pest": "^2.1",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HayderHatem\\FilamentSubNavigation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HayderHatem\\FilamentSubNavigation\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HayderHatem\\FilamentSubNavigation\\FilamentSubNavigationServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+} 
